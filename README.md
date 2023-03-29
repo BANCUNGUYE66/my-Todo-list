@@ -125,7 +125,7 @@ Install this project with:
 
 ```sh
   
-  gh repo clone Tafloninno/To_do_list
+  gh repo clone bancunguye66/To_Do_List
   npm install -y
 ```
 
@@ -238,7 +238,7 @@ I would like to thank  Microverse
 
 <!-- LICENSE -->
 
-## 📝 License <a name="license"></a>
+## 📝 License <a name="license">https://opensource.org/licenses/MIT</a>
 
 This project is [MIT](./LICENSE) licensed.
 
