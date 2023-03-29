@@ -238,7 +238,7 @@ I would like to thank  Microverse
 
 <!-- LICENSE -->
 
-## 📝 License <a name="license">https://opensource.org/licenses/MIT</a>
+## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
 
