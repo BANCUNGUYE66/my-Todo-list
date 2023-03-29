@@ -40,18 +40,18 @@ input:focus {
 form {
   display: flex;
   justify-content: space-between;
-  padding: 12px;
+  padding: 14px;
 }
 
 .task-list {
   list-style: none;
-  padding: 12px;
+  padding: 14px;
   margin: 0;
 }
 
 .task-list li {
   display: flex;
-  gap: 5px;
+  gap: 4px;
   border-bottom: 1px solid rgb(231, 227, 227);
   border-top: 1px solid rgb(231, 227, 227);
 }
