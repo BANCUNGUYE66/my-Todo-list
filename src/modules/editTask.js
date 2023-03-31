@@ -1,62 +1,94 @@
-const formlayout = document.querySelector('form');
-const input = document.querySelector('#listAdd');
-const todoItems = document.querySelector('.todoItems');
+const form = document.querySelector('form');
+const input = document.querySelector('.input');
+const todoListWrapper = document.querySelector('.todoList_wrapper');
 
-let todoTask;
-let todos = JSON.parse(localStorage.getItem('todos')) || [];
+let todos = [];
+let todo;
+
+const storeData = () => {
+  const allTodos = JSON.stringify(todos);
+  localStorage.setItem('todos', allTodos);
+};
+
+const getStoredTodos = () => {
+  todos = JSON.parse(localStorage.getItem('todos'));
+};
+
 const store = () => {
-  todoTask = {
+  todo = {
     Description: input.value,
     id: todos.length + 1,
     completed: false,
   };
-  todos.push(todoTask);
-  localStorage.setItem('todos', JSON.stringify(todos));
+  todos.push(todo);
+  storeData();
 };
 
 const clear = () => {
   input.value = '';
 };
 
-const removeTask = (id) => {
-  todos = todos.filter((books) => books.id !== id);
-  todos.forEach((todoTask, id) => {
-    todoTask.id = id + 1;
-  });
-  localStorage.setItem('todos', JSON.stringify(todos));
+const completeTask = (stats, index) => {
+  todos[index - 1].completed = stats;
+  storeData();
 };
 
-const addTask = (todoTask) => {
+const removeTask = (id) => {
+  todos = todos.filter((task) => task.id !== id);
+  todos.forEach((todo, id) => {
+    todo.id = id + 1;
+  });
+  storeData();
+};
+
+const addtodoTask = (todo) => {
   const ul = document.createElement('div');
   const checkBox = document.createElement('input');
   checkBox.type = 'checkbox';
   checkBox.classList.add('checkBox');
+
   const newInp = document.createElement('input');
   newInp.type = 'text';
   newInp.classList.add('newInput');
-  newInp.value = todoTask.Description;
+  newInp.value = todo.Description;
+
+  checkBox.onclick = (e) => {
+    completeTask(e.target.checked, todo.id);
+
+    if (todo.completed === true) {
+      newInp.classList.add('completed');
+    } else {
+      newInp.classList.remove('completed');
+    }
+  };
+
+  if (todo.completed === true) {
+    checkBox.checked = 'checked';
+    newInp.classList.add('completed');
+  }
+
   const icon = document.createElement('i');
   icon.classList.add('fa-solid');
   icon.classList.add('fa-trash');
   icon.classList.add('dots');
   const hr = document.createElement('hr');
   ul.append(checkBox, newInp, icon, hr);
-  todoItems.append(ul);
+  todoListWrapper.append(ul);
   icon.addEventListener('click', () => {
     icon.parentElement.remove();
-    removeTask(todoTask.id);
+    removeTask(todo.id);
   });
 };
-todos.forEach(addTask);
+todos.forEach(addtodoTask);
 
 const editTodoList = () => {
   const editInput = document.querySelectorAll('.newInput');
   editInput.forEach((edits, indexy) => {
     edits.addEventListener('change', () => {
-      todos.forEach((todoTask, index) => {
+      todos.forEach((todo, index) => {
         if (indexy === index) {
-          todoTask.Description = edits.value;
-          localStorage.setItem('todos', JSON.stringify(todos));
+          todo.Description = edits.value;
+          storeData();
         }
       });
     });
@@ -64,15 +96,41 @@ const editTodoList = () => {
 };
 editTodoList();
 
-function populate() {
-  formlayout.addEventListener('submit', (e) => {
+function formSubmission() {
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
     if (input.value !== '') {
       store();
-      addTask(todoTask);
+      addtodoTask(todo);
       clear();
     }
   });
 }
 
-export { populate, editTodoList };
+const populateTasks = () => {
+  if (localStorage.getItem('todos')) {
+    getStoredTodos();
+    todos.map((task) => {
+      addtodoTask(task);
+      return task;
+    });
+  } else {
+    todos.map((task) => {
+      addtodoTask(task);
+      return task;
+    });
+  }
+};
+
+const clearCompleted = () => {
+  todos = todos.filter((task) => task.completed !== true);
+  todos.forEach((todo, id) => {
+    todo.id = id + 1;
+  });
+  storeData();
+  window.location.reload();
+};
+
+export {
+  formSubmission, editTodoList, populateTasks, clearCompleted,
+};
