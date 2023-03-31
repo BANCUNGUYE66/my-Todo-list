@@ -9,7 +9,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 12px;
-  color: rgb(116, 114, 114);
+  color: rgb(162, 161, 161);
 }
 
 body {
@@ -19,57 +19,61 @@ body {
   height: 100vh;
 }
 
-.container {
-  width: 500px;
+.todo_container {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  padding: 20px 0 0 0;
   height: 100%;
+  width: 500px;
   position: relative;
   overflow: auto;
 }
 
 .input {
   width: 100%;
-  padding: 18px;
+  padding: 18px 24px;
   border: none;
   outline: none;
   font-style: italic;
-  font-size: 18px;
+  font-size: 20px;
 }
 
-.todoItems div {
+.add_task_button i {
+  color: rgb(162, 161, 161);
+}
+
+.todoList_wrapper div {
   display: flex;
   align-items: center;
   border: 1px solid lightgray;
 }
 
-.todoItems ul {
+.todoList_wrapper ul {
   list-style-type: none;
 }
 
-.todoItems li {
+.todoList_wrapper li {
   text-align: left;
   font-size: 18px;
   font-family: sans-serif;
-  padding: 20px;
+  margin-left: 20px;
 }
 
-.remove_button {
+.clear-completed {
   background: none;
   border: none;
-  font-size: 16px;
+  font-size: 20px;
   padding: 12px 0;
   font-style: italic;
-  color: #393838;
+  color: #464545;
 }
 
 .input_wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid lightgray;
 }
 
-.buttom_form {
+.add_task_button {
   background-color: #fff;
   border: 1px hidden;
   margin-right: 10px;
@@ -77,8 +81,8 @@ body {
 
 .clear {
   text-align: center;
-  background: lightgray;
-  padding: 12px;
+  background-color: rgb(162, 161, 161);
+  padding: 10px 0;
 }
 
 .checkBox {
@@ -100,7 +104,7 @@ body {
   font-size: 18px;
   border: none;
   outline: none;
-  padding: 20px;
+  padding: 12px;
 }
 
 .add.done {

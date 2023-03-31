@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ToDo</title>
+    <title>TodoList</title>
     <script
       src="https://kit.fontawesome.com/95c0469538.js"
       crossorigin="anonymous"
@@ -12,30 +12,30 @@
   </head>
   <body>
     <main>
-      <section class="container">
-            <header>
-            <h2>Today's To-do</h2>
-            <i class="fa-solid fa-arrows-rotate arrow"></i>
-            </header>
+      <section class="todo_container">
+        <header>
+          <h2>Today's to-do</h2>
+          <i class="fa-solid fa-arrows-rotate arrow"></i>
+        </header>
 
-            <section>
-                <form>
-                    <div class="input_wrapper">
-                        <input type="text" class="input" id="listAdd" placeholder="add to your list" required/>
-                        <button type="submit" class="buttom_form"> <i class="fa fa-share" id="add"></i></button>
-                    </div>
-                </form>
+        <section>
+          <form>
+            <hr />
+            <div class="input_wrapper">
+              <input type="text" class="input" id="input" placeholder="add to your list" required/>
+              <button type="submit" class="add_task_button"> <i class="fa fa-share" id="add"></i> </button>
+            </div>
 
-                <div class="todoItems"></div>
+            <hr />
+          </form>
+          <div class="todoList_wrapper"></div>
 
-                <div class="clear">
-                    <button type="button" id="clear-completed" class="remove_button">
-                    Clear all completed
-                    </button>
-                </div>
-           </section>
+          <div class="clear">
+            <button type="button" id="clear-completed" class="clear-completed">Clear all completed</button>
+          </div>
+        </section>
       </section>
     </main>
-    <script src="/index.js"></script>
+    <script type="module" src="./src/index.js"></script>
   </body>
 </html>
