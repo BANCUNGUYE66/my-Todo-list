@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TodoList</title>
+    <script
+      src="https://kit.fontawesome.com/95c0469538.js"
+      crossorigin="anonymous"
+    ></script>
+  <script defer src="runtime.main.js"></script><script defer src="main.main.js"></script></head>
+  <body>
+    <main>
+      <section class="todo_container">
+        <header>
+          <h2>Today's to-do</h2>
+          <i class="fa-solid fa-arrows-rotate arrow"></i>
+        </header>
+
+        <section>
+          <form>
+            <hr />
+            <div class="input_wrapper">
+              <input type="text" class="input" id="input" placeholder="add to your list" required/>
+              <button type="submit" class="add_task_button"> <i class="fa fa-share" id="add"></i> </button>
+            </div>
+
+            <hr />
+          </form>
+          <div class="todoList_wrapper"></div>
+
+          <div class="clear">
+            <button type="button" id="clear-completed" class="clear-completed">Clear all completed</button>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script type="module" src="./src/index.js"></script>
+  </body>
+</html>
