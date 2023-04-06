@@ -18,25 +18,23 @@
 
 # 📗 Table of Contents
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
-- [📝 License](#license)
+- [� Table of Contents](#-table-of-contents)
+  - [📖 To-Do list ](#-to-do-list-)
+  - [🛠 Built With  VSCode  ](#-built-with--vscode--)
+    - [HTML/CSS, javascript, Webpack ](#htmlcss-javascript-webpack-)
+  - [🚀 Live Demo](#-live-demo)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Run tests](#run-tests)
+  - [👥 Bancunguye66 , ](#-bancunguye66--)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [❓ FAQ (OPTIONAL) ](#-faq-optional-)
+  - [📝 License ](#-license-)
 
 
 
@@ -78,7 +76,9 @@ This is a  website that displays a list of Todo tasks and allows you to add new 
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="live-demo">https://bancunguye66.github.io/my-Todo-list/</a>
+## 🚀 Live Demo
+
+<a name="live-demo">Very soon</a>
 
 
 
@@ -168,6 +168,13 @@ To run tests, run the following command:
 - GitHub: [@githubhandle](https://github.com/bancunguye66)
 
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/aimable-bancunguye-aba703143/)
+  
+  
+👤 **Rose Mutai**
+
+- GitHub: [@githubhandle](https://github.com/rosemutai)
+
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/rosemutai/)
 
 
 
