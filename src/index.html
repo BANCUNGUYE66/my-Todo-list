@@ -2,40 +2,41 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TodoList</title>
-    <script
-      src="https://kit.fontawesome.com/95c0469538.js"
-      crossorigin="anonymous"
-    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <title>To Do list</title>
   </head>
   <body>
-    <main>
-      <section class="todo_container">
-        <header>
-          <h2>Today's to-do</h2>
-          <i class="fa-solid fa-arrows-rotate arrow"></i>
-        </header>
+    <header class="header">
+      <div class="to-do">
+        <h2 class="heading">Today's To Do</h2>
+      </div>
+      <div class="iconth">
+        <i class="fa-solid fa-arrows-rotate"></i>
+      </div>
+    </header>
 
-        <section>
-          <form>
-            <hr />
-            <div class="input_wrapper">
-              <input type="text" class="input" id="input" placeholder="add to your list" required/>
-              <button type="submit" class="add_task_button"> <i class="fa fa-share" id="add"></i> </button>
-            </div>
+    <form class="input-add" id="form">
+      <div class="input">
+        <input type="text" placeholder="Add to your list..." class="new-task" />
+      </div>
+      <div class="add-to-list">
+        <span class="material-symbols-outlined"> arrow_forward </span>
+      </div>
+    </form>
 
-            <hr />
-          </form>
-          <div class="todoList_wrapper"></div>
-
-          <div class="clear">
-            <button type="button" id="clear-completed" class="clear-completed">Clear all completed</button>
-          </div>
-        </section>
-      </section>
-    </main>
-    <script type="module" src="./src/index.js"></script>
+    <section class="to-do">
+      <ul id="data"></ul>
+      <div class="clear">
+        <button class="delete">Clear all completed</button>
+      </div>
+    </section>
   </body>
 </html>
