@@ -113,7 +113,7 @@ Example command:
 
 Clone this repository to your desired folder:
 <br>
-<br>gh repo clone https://github.com/BANCUNGUYE66/To-Do-List.git
+<br>gh repo clone https://github.com/BANCUNGUYE66/my-Todo-list.git
 
 
 
@@ -125,7 +125,7 @@ Install this project with:
 
 ```sh
   
-  gh repo clone bancunguye66/To_Do_List
+  gh repo clone https://github.com/BANCUNGUYE66/my-Todo-list.git
   npm install -y
 ```
 
