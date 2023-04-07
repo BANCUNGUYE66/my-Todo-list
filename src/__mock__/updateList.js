@@ -7,7 +7,7 @@ const update = (index) => {
 
   const updateTask = taskList.filter((item) => {
     item.index === index &&
-      (item.description = "I will complete my week's task");
+      (item.description = "I will complete my week's tasks");
 
     return item;
   });
