@@ -1,5 +1,3 @@
-/* eslint-disable operator-linebreak */
-/* eslint-disable no-unused-expressions */
 import display from './display.js';
 
 const update = (index) => {
@@ -9,7 +7,7 @@ const update = (index) => {
 
   const updateTask = taskList.filter((item) => {
     item.index === index &&
-      (item.description = "I will complete my week's tasks");
+      (item.description = "I will complete my week's task");
 
     return item;
   });

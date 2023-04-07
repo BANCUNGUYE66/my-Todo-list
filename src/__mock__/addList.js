@@ -1,4 +1,3 @@
-/* eslint-disable comma-dangle */
 import display from './display.js';
 
 const addList = () => {
