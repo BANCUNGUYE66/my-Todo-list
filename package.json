@@ -5,8 +5,8 @@
   "private": true,
   "scripts": {
     "watch": "webpack --watch",
-    "start": "webpack serve --open",
-    "build": "webpack",
+    "start": "node api.js && webpack serve --open",
+    "build": "node api.js && webpack",
     "test": "jest --coverage"
   },
   "jest": {
