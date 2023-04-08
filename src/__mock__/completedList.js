@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-expressions */
-
 const completedList = (index) => {
   let taskList = [];
 

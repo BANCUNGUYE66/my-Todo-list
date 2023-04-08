@@ -8,12 +8,12 @@ const display = () => {
     task.classList.add('task');
     task.setAttribute('draggable', 'true');
     task.innerHTML = `
-      <input type="checkbox" class="check" ${comp} id="check" data-set="${element.index}">
-      <input class="edit" type="text" value="${element.description}">
-      <div class="can">
-      <i id="${element.index}" class="fa-solid fa-trash-can"></i>
-      </div>
-      `;
+    <input type="checkbox" class="check" ${comp} id="check" data-set="${element.index}">
+    <input class="edit" type="text" value="${element.description}">
+    <div class="can">
+    <i id="${element.index}" class="fa-solid fa-trash-can"></i>
+    </div>
+    `;
   });
 };
 
